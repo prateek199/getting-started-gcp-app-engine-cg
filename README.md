@@ -1,13 +1,13 @@
-# Deploy Static Web App in Google App Engine
+# Deploy Static Web App in Google App Engine :
 You can use Google App Engine to host a static website. Static web pages can contain client-side technologies such as HTML, CSS, and JavaScript.
 
-## Before you begin
+## Before you begin :
 1. Create a new GCP [Console project](https://console.cloud.google.com/project)
 2. Install and then initialize the Google Cloud SDK: [Click Here](https://cloud.google.com/sdk/docs/)
 
 
 ## Creating a website to host on Google App Engine
-### Basic structure for the project
+### Basic structure for the project:
 This guide uses the following structure for the project:
 .
  * app.yaml
@@ -17,7 +17,7 @@ This guide uses the following structure for the project:
    * img/
    * index.html
 
-#### Details
+#### Details :
 1. <b>`app.yaml`</b>: Configure the settings of your App Engine application.
 1. <b>`www/`</b>: Directory to store all of your static files, such as HTML, CSS, images, and JavaScript.
 1. <b>`css/`</b>: Directory to store stylesheets.
@@ -28,7 +28,7 @@ This guide uses the following structure for the project:
 1. Other asset directories.
 
 
-### Creating the app.yaml file
+### Creating the app.yaml file :
 The `app.yaml` file is a configuration file that tells App Engine how to map URLs to your static files. In the following steps, you will add handlers that will load `www/index.html` when someone visits your website, and all static files will be stored in and called from the `www` directory. 
 
 `app.yaml` file 
@@ -48,7 +48,7 @@ handlers:
   upload: www/(.*)
 ```
 
-### Creating the index.html file
+### Creating the index.html file :
   Create an `HTML` file that will be served when someone navigates to the root page of your website. Store this file in your `www`   directory.
 
   `index.html` file
@@ -69,10 +69,10 @@ handlers:
   </html>
   ```
   
-### Deploying your application to App Engine
+### Deploying your application to App Engine :
 Use command in GCP SDK with the dir
 `gcloud app deploy`
 
-### View the Web Application
+### View the Web Application :
 `gcloud app browser`
 
